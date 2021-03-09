@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10A3B9EF9958FAF9B650470A /* Pods_Birthdays.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F96C7F1C0DB2FEF597BD1D /* Pods_Birthdays.framework */; };
 		40074D8E25F51714001A886D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40074D8D25F51714001A886D /* AppDelegate.swift */; };
 		40074D9025F51714001A886D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40074D8F25F51714001A886D /* SceneDelegate.swift */; };
-		40074D9225F51714001A886D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40074D9125F51714001A886D /* ViewController.swift */; };
+		40074D9225F51714001A886D /* BirthdaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40074D9125F51714001A886D /* BirthdaysViewController.swift */; };
 		40074D9525F51714001A886D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40074D9325F51714001A886D /* Main.storyboard */; };
 		40074D9825F51714001A886D /* Birthdays.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40074D9625F51714001A886D /* Birthdays.xcdatamodeld */; };
-		40074D9A25F51718001A886D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40074D9925F51718001A886D /* Assets.xcassets */; };
 		40074D9D25F51718001A886D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40074D9B25F51718001A886D /* LaunchScreen.storyboard */; };
+		4029965025F6723A007AA1CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4029964F25F67238007AA1CB /* Assets.xcassets */; };
+		40DF44DB25F5408900E98B9C /* AddBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DF44DA25F5408900E98B9C /* AddBirthdayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19F96C7F1C0DB2FEF597BD1D /* Pods_Birthdays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthdays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA54E7E0ECC4C778A636FF7 /* Pods-Birthdays.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthdays.release.xcconfig"; path = "Target Support Files/Pods-Birthdays/Pods-Birthdays.release.xcconfig"; sourceTree = "<group>"; };
 		40074D8A25F51714001A886D /* Birthdays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birthdays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40074D8D25F51714001A886D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40074D8F25F51714001A886D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		40074D9125F51714001A886D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40074D9125F51714001A886D /* BirthdaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysViewController.swift; sourceTree = "<group>"; };
 		40074D9425F51714001A886D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40074D9725F51714001A886D /* Birthdays.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Birthdays.xcdatamodel; sourceTree = "<group>"; };
-		40074D9925F51718001A886D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40074D9C25F51718001A886D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40074D9E25F51718001A886D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4029964F25F67238007AA1CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40DF44DA25F5408900E98B9C /* AddBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthdayViewController.swift; sourceTree = "<group>"; };
+		F46CF14CDC728D1E152E3A8E /* Pods-Birthdays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthdays.debug.xcconfig"; path = "Target Support Files/Pods-Birthdays/Pods-Birthdays.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A3B9EF9958FAF9B650470A /* Pods_Birthdays.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				40074D8C25F51714001A886D /* Birthdays */,
 				40074D8B25F51714001A886D /* Products */,
+				E3D101450D9BFF4CE8E93F3A /* Pods */,
+				969267CFE807E20D3F688FD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +69,41 @@
 			children = (
 				40074D8D25F51714001A886D /* AppDelegate.swift */,
 				40074D8F25F51714001A886D /* SceneDelegate.swift */,
-				40074D9125F51714001A886D /* ViewController.swift */,
 				40074D9325F51714001A886D /* Main.storyboard */,
-				40074D9925F51718001A886D /* Assets.xcassets */,
+				4029964F25F67238007AA1CB /* Assets.xcassets */,
 				40074D9B25F51718001A886D /* LaunchScreen.storyboard */,
 				40074D9E25F51718001A886D /* Info.plist */,
 				40074D9625F51714001A886D /* Birthdays.xcdatamodeld */,
+				40DF44DD25F540FC00E98B9C /* Controllers */,
 			);
 			path = Birthdays;
+			sourceTree = "<group>";
+		};
+		40DF44DD25F540FC00E98B9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40DF44DA25F5408900E98B9C /* AddBirthdayViewController.swift */,
+				40074D9125F51714001A886D /* BirthdaysViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		969267CFE807E20D3F688FD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19F96C7F1C0DB2FEF597BD1D /* Pods_Birthdays.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3D101450D9BFF4CE8E93F3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F46CF14CDC728D1E152E3A8E /* Pods-Birthdays.debug.xcconfig */,
+				3FA54E7E0ECC4C778A636FF7 /* Pods-Birthdays.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40074DA125F51718001A886D /* Build configuration list for PBXNativeTarget "Birthdays" */;
 			buildPhases = (
+				D0F56D74EBD287014F3FDA82 /* [CP] Check Pods Manifest.lock */,
 				40074D8625F51714001A886D /* Sources */,
 				40074D8725F51714001A886D /* Frameworks */,
 				40074D8825F51714001A886D /* Resources */,
+				1EF75C1DB51D5973F5C5AB5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,12 +166,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				40074D9D25F51718001A886D /* LaunchScreen.storyboard in Resources */,
-				40074D9A25F51718001A886D /* Assets.xcassets in Resources */,
+				4029965025F6723A007AA1CB /* Assets.xcassets in Resources */,
 				40074D9525F51714001A886D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EF75C1DB51D5973F5C5AB5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Birthdays/Pods-Birthdays-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Birthdays/Pods-Birthdays-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Birthdays/Pods-Birthdays-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0F56D74EBD287014F3FDA82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Birthdays-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		40074D8625F51714001A886D /* Sources */ = {
@@ -141,7 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				40074D9825F51714001A886D /* Birthdays.xcdatamodeld in Sources */,
-				40074D9225F51714001A886D /* ViewController.swift in Sources */,
+				40DF44DB25F5408900E98B9C /* AddBirthdayViewController.swift in Sources */,
+				40074D9225F51714001A886D /* BirthdaysViewController.swift in Sources */,
 				40074D8E25F51714001A886D /* AppDelegate.swift in Sources */,
 				40074D9025F51714001A886D /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +368,7 @@
 		};
 		40074DA225F51718001A886D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F46CF14CDC728D1E152E3A8E /* Pods-Birthdays.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +388,7 @@
 		};
 		40074DA325F51718001A886D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FA54E7E0ECC4C778A636FF7 /* Pods-Birthdays.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

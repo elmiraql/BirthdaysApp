@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +14,74 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="V7s-4Y-8Xy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rx-iE-thk">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="405"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cake" translatesAutoresizingMaskIntoConstraints="NO" id="2SU-lB-S8G">
+                                                <rect key="frame" x="107" y="205" width="200" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="SYl-eb-aJY"/>
+                                                    <constraint firstAttribute="width" constant="200" id="ZS1-BU-jX8"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2SU-lB-S8G" firstAttribute="centerX" secondItem="0rx-iE-thk" secondAttribute="centerX" id="cTG-If-ojh"/>
+                                            <constraint firstAttribute="bottom" secondItem="2SU-lB-S8G" secondAttribute="bottom" id="dPg-U5-Nyz"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3l-yr-Ogy">
+                                        <rect key="frame" x="0.0" y="413" width="414" height="405"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Never forget a birthday again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB8-7O-Js8">
+                                                <rect key="frame" x="30" y="20" width="354" height="60"/>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uB8-7O-Js8" firstAttribute="top" secondItem="E3l-yr-Ogy" secondAttribute="top" constant="20" id="2yE-eE-E5R"/>
+                                            <constraint firstItem="uB8-7O-Js8" firstAttribute="centerX" secondItem="E3l-yr-Ogy" secondAttribute="centerX" id="jh5-vY-Gqd"/>
+                                            <constraint firstItem="uB8-7O-Js8" firstAttribute="leading" secondItem="E3l-yr-Ogy" secondAttribute="leading" constant="30" id="ydl-ET-yhS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0rx-iE-thk" firstAttribute="leading" secondItem="V7s-4Y-8Xy" secondAttribute="leading" id="07G-nd-uvr"/>
+                                    <constraint firstAttribute="bottom" secondItem="E3l-yr-Ogy" secondAttribute="bottom" id="HuV-hu-Bzg"/>
+                                    <constraint firstItem="0rx-iE-thk" firstAttribute="top" secondItem="V7s-4Y-8Xy" secondAttribute="top" id="KGx-w1-KS7"/>
+                                    <constraint firstItem="E3l-yr-Ogy" firstAttribute="leading" secondItem="V7s-4Y-8Xy" secondAttribute="leading" id="OWU-Qv-FD1"/>
+                                    <constraint firstAttribute="trailing" secondItem="E3l-yr-Ogy" secondAttribute="trailing" id="dho-p2-2rX"/>
+                                    <constraint firstAttribute="trailing" secondItem="0rx-iE-thk" secondAttribute="trailing" id="kse-Y5-a6g"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="PinkColor"/>
+                        <constraints>
+                            <constraint firstItem="V7s-4Y-8Xy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="GTr-Kd-9ku"/>
+                            <constraint firstItem="V7s-4Y-8Xy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JfS-2Z-PHF"/>
+                            <constraint firstItem="V7s-4Y-8Xy" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="XI6-tM-sf1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V7s-4Y-8Xy" secondAttribute="bottom" id="lBy-2w-kH2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-562.31884057971024" y="730.58035714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cake" width="1024" height="1024"/>
+        <namedColor name="PinkColor">
+            <color red="1" green="0.45899999141693115" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
