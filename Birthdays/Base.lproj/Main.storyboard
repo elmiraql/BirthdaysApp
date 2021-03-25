@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReuseCell" textLabel="rZ9-2j-fjA" detailTextLabel="TXT-pj-ifs" style="IBUITableViewCellStyleSubtitle" id="J72-FX-0u4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReuseCell" textLabel="rZ9-2j-fjA" detailTextLabel="TXT-pj-ifs" style="IBUITableViewCellStyleSubtitle" id="J72-FX-0u4">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J72-FX-0u4" id="WBx-1K-JHV">
@@ -141,20 +142,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5v-rb-bLJ" userLabel="BottomView">
                                         <rect key="frame" x="0.0" y="409" width="414" height="409"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Teb-SQ-71H">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Teb-SQ-71H">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
                                                 <subviews>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="mBk-md-qwl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="291"/>
                                                     </datePicker>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khc-Tq-AVU">
-                                                        <rect key="frame" x="167" y="329" width="80" height="80"/>
+                                                        <rect key="frame" x="137" y="299" width="140" height="80"/>
                                                         <color key="backgroundColor" name="GreenBlue"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Ob6-W4-QOj"/>
-                                                            <constraint firstAttribute="height" constant="80" id="x7h-2g-5ZQ"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Ob6-W4-QOj"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="x7h-2g-5ZQ"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
                                                         <state key="normal" title="Save">
                                                             <color key="titleColor" name="DarkestBlue"/>
                                                         </state>
@@ -166,13 +167,14 @@
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="mBk-md-qwl" secondAttribute="trailing" id="3XL-6c-g94"/>
                                                     <constraint firstItem="mBk-md-qwl" firstAttribute="centerX" secondItem="Teb-SQ-71H" secondAttribute="centerX" id="Bzx-qU-tzX"/>
+                                                    <constraint firstItem="khc-Tq-AVU" firstAttribute="top" secondItem="mBk-md-qwl" secondAttribute="bottom" constant="8" id="TeZ-qG-BSO"/>
                                                     <constraint firstItem="mBk-md-qwl" firstAttribute="leading" secondItem="Teb-SQ-71H" secondAttribute="leading" id="UYG-h4-KaS"/>
                                                     <constraint firstItem="khc-Tq-AVU" firstAttribute="centerX" secondItem="Teb-SQ-71H" secondAttribute="centerX" id="a8t-NV-Hcl"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Teb-SQ-71H" secondAttribute="bottom" id="Rre-j2-b6L"/>
+                                            <constraint firstAttribute="bottom" secondItem="Teb-SQ-71H" secondAttribute="bottom" constant="30" id="FKb-Lv-qwF"/>
                                             <constraint firstAttribute="trailing" secondItem="Teb-SQ-71H" secondAttribute="trailing" id="ZAi-no-Jbb"/>
                                             <constraint firstItem="Teb-SQ-71H" firstAttribute="top" secondItem="I5v-rb-bLJ" secondAttribute="top" id="gTW-cn-6Qq"/>
                                             <constraint firstItem="Teb-SQ-71H" firstAttribute="leading" secondItem="I5v-rb-bLJ" secondAttribute="leading" id="sLN-rg-zaF"/>

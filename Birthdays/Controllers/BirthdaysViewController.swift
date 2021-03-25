@@ -57,8 +57,8 @@ class BirthdaysViewController: UIViewController {
             content.body = message
             content.sound = UNNotificationSound.default
             var dateComponents = Calendar.current.dateComponents([.month, .day], from: date)
-            dateComponents.hour = 20
-            dateComponents.minute = 50
+            dateComponents.hour = 22
+            dateComponents.minute = 00
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
             if let identifier = newBirthday.birthdayId {
                 let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
