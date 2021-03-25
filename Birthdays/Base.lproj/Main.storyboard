@@ -17,19 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-E9-KQN">
-                                <rect key="frame" x="167" y="664" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="hs9-Tq-Aj0"/>
-                                    <constraint firstAttribute="width" constant="80" id="rbd-hC-0GL"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="add"/>
-                                <connections>
-                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QOA-XT-kpK"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JxA-9T-4u2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="634"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,18 +53,22 @@
                         <viewLayoutGuide key="safeArea" id="z8W-Ma-7pr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="z8W-Ma-7pr" firstAttribute="bottom" secondItem="sj8-E9-KQN" secondAttribute="bottom" constant="30" id="88N-vQ-NsV"/>
-                            <constraint firstItem="z8W-Ma-7pr" firstAttribute="trailing" secondItem="JxA-9T-4u2" secondAttribute="trailing" id="IR6-o9-1ge"/>
-                            <constraint firstItem="sj8-E9-KQN" firstAttribute="top" secondItem="JxA-9T-4u2" secondAttribute="bottom" constant="30" id="L5H-sr-pXy"/>
-                            <constraint firstItem="sj8-E9-KQN" firstAttribute="centerX" secondItem="z8W-Ma-7pr" secondAttribute="centerX" id="bdK-eD-2O6"/>
-                            <constraint firstItem="JxA-9T-4u2" firstAttribute="top" secondItem="z8W-Ma-7pr" secondAttribute="top" id="keb-fQ-jbT"/>
-                            <constraint firstItem="JxA-9T-4u2" firstAttribute="leading" secondItem="z8W-Ma-7pr" secondAttribute="leading" id="ybU-X3-YOr"/>
+                            <constraint firstItem="z8W-Ma-7pr" firstAttribute="bottom" secondItem="JxA-9T-4u2" secondAttribute="bottom" id="TjB-qH-RCJ"/>
+                            <constraint firstItem="JxA-9T-4u2" firstAttribute="top" secondItem="z8W-Ma-7pr" secondAttribute="top" id="bdc-B9-ZJT"/>
+                            <constraint firstItem="JxA-9T-4u2" firstAttribute="leading" secondItem="z8W-Ma-7pr" secondAttribute="leading" id="xSn-Tg-NJZ"/>
+                            <constraint firstItem="JxA-9T-4u2" firstAttribute="trailing" secondItem="z8W-Ma-7pr" secondAttribute="trailing" id="xbc-GL-1k7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Birthdays" id="sq2-pt-Pr5"/>
+                    <navigationItem key="navigationItem" title="Birthdays" id="sq2-pt-Pr5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="QuR-7k-FVZ">
+                            <color key="tintColor" name="DarkestBlue"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="7lw-Ny-Rel"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="JxA-9T-4u2" id="jOU-CD-Cwo"/>
-                        <segue destination="muo-yO-cyv" kind="presentation" identifier="AddBirthday" id="9IX-eu-AWW"/>
+                        <outlet property="table" destination="JxA-9T-4u2" id="1Um-ut-vc8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,25 +78,25 @@
         <!--Add Birthday-->
         <scene sceneID="76h-hH-rfA">
             <objects>
-                <viewController id="zld-Eq-TbI" customClass="AddBirthdayViewController" customModule="Birthdays" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="new" id="zld-Eq-TbI" customClass="AddBirthdayViewController" customModule="Birthdays" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zhh-tv-aPj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hbW-ry-AxT">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3n-in-wCZ" userLabel="TopView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="376"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c0T-eH-PlP">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="376"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hb" translatesAutoresizingMaskIntoConstraints="NO" id="YrO-qC-3Ut">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="289"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VSk-FB-xcD">
-                                                        <rect key="frame" x="40" y="256" width="334" height="120"/>
+                                                        <rect key="frame" x="40" y="289" width="334" height="120"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkf-oh-6y6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -114,9 +107,10 @@
                                                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="25"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2x-PX-q36">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" adjustsFontForContentSizeCategory="YES" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="u2x-PX-q36">
                                                                 <rect key="frame" x="0.0" y="70" width="334" height="50"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" name="DarkestBlue"/>
                                                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="25"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -145,24 +139,24 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5v-rb-bLJ" userLabel="BottomView">
-                                        <rect key="frame" x="0.0" y="376" width="414" height="376"/>
+                                        <rect key="frame" x="0.0" y="409" width="414" height="409"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Teb-SQ-71H">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="376"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                                 <subviews>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="mBk-md-qwl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
                                                     </datePicker>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khc-Tq-AVU">
-                                                        <rect key="frame" x="167" y="296" width="80" height="80"/>
-                                                        <color key="backgroundColor" name="YellowColor"/>
+                                                        <rect key="frame" x="167" y="329" width="80" height="80"/>
+                                                        <color key="backgroundColor" name="GreenBlue"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Ob6-W4-QOj"/>
                                                             <constraint firstAttribute="height" constant="80" id="x7h-2g-5ZQ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                                         <state key="normal" title="Save">
-                                                            <color key="titleColor" name="PinkColor"/>
+                                                            <color key="titleColor" name="DarkestBlue"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="saveButtonPressed:" destination="zld-Eq-TbI" eventType="touchUpInside" id="eR0-dG-syw"/>
@@ -198,7 +192,8 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dNp-HE-BaG"/>
-                        <color key="backgroundColor" name="YellowColor"/>
+                        <color key="backgroundColor" name="LightBlue"/>
+                        <color key="tintColor" name="DarkestBlue"/>
                         <constraints>
                             <constraint firstItem="hbW-ry-AxT" firstAttribute="leading" secondItem="dNp-HE-BaG" secondAttribute="leading" id="O0f-ck-wQT"/>
                             <constraint firstItem="dNp-HE-BaG" firstAttribute="bottom" secondItem="hbW-ry-AxT" secondAttribute="bottom" id="gam-NW-kw5"/>
@@ -234,7 +229,10 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="YellowColor"/>
-                        <color key="barTintColor" name="YellowColor"/>
+                        <color key="barTintColor" name="LightBlue"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="DarkestBlue"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -251,14 +249,15 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="muo-yO-cyv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JNj-Q4-gN8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="YellowColor"/>
+                        <color key="tintColor" name="DarkestBlue"/>
+                        <color key="barTintColor" name="LightBlue"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="DarkestBlue"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="zld-Eq-TbI" kind="relationship" relationship="rootViewController" id="i9R-gT-Wc3"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzK-Fi-ona" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,10 +265,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="1024" height="1024"/>
         <image name="hb" width="940" height="788"/>
-        <namedColor name="PinkColor">
-            <color red="1" green="0.45899999141693115" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="DarkestBlue">
+            <color red="0.25499999523162842" green="0.23499999940395355" blue="0.41200000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GreenBlue">
+            <color red="0.43900001049041748" green="0.62400001287460327" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightBlue">
+            <color red="0.65499997138977051" green="0.77300000190734863" blue="0.92199999094009399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="YellowColor">
             <color red="0.98799997568130493" green="0.88999998569488525" blue="0.54100000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

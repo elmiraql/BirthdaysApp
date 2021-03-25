@@ -23,7 +23,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rx-iE-thk">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="405"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cake" translatesAutoresizingMaskIntoConstraints="NO" id="2SU-lB-S8G">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cake-1" translatesAutoresizingMaskIntoConstraints="NO" id="2SU-lB-S8G">
                                                 <rect key="frame" x="107" y="205" width="200" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="SYl-eb-aJY"/>
@@ -42,7 +42,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Never forget a birthday again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB8-7O-Js8">
                                                 <rect key="frame" x="30" y="20" width="354" height="60"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.84927347953745858" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -64,7 +64,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="PinkColor"/>
+                        <color key="backgroundColor" name="DarkBlue"/>
                         <constraints>
                             <constraint firstItem="V7s-4Y-8Xy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="GTr-Kd-9ku"/>
                             <constraint firstItem="V7s-4Y-8Xy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JfS-2Z-PHF"/>
@@ -79,9 +79,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cake" width="1024" height="1024"/>
-        <namedColor name="PinkColor">
-            <color red="1" green="0.45899999141693115" blue="0.62699997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="cake-1" width="1024" height="1024"/>
+        <namedColor name="DarkBlue">
+            <color red="0.28999999165534973" green="0.27799999713897705" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

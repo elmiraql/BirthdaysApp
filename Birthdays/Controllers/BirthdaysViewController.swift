@@ -10,18 +10,18 @@ import CoreData
 import UserNotifications
 
 class BirthdaysViewController: UIViewController {
-  
+    
     var birthdays: [Birthday] = []
     let dateFormatter = DateFormatter()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dateFormatter.dateStyle = .full
         dateFormatter.timeStyle = .none
-        tableView.dataSource = self
+        table.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,16 +34,41 @@ class BirthdaysViewController: UIViewController {
         } catch let error {
             print(error)
         }
-        tableView.reloadData()
+        table.reloadData()
     }
-
-
-    @IBAction func addButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "AddBirthday", sender: self)
-        //present(AddBirthdayViewController(), animated: true, completion: nil)
-    }
-   
     
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? AddBirthdayViewController else {
+            return
+        }
+        
+        vc.completion = { firstName, lastName, date in
+            self.navigationController?.popToRootViewController(animated: true)
+            let newBirthday = Birthday(context: self.context)
+            newBirthday.firstName = firstName
+            newBirthday.lastName = lastName
+            newBirthday.date = date
+            newBirthday.birthdayId = UUID().uuidString
+            self.birthdays.append(newBirthday)
+            self.saveItems()
+            
+            let message = "It is \(firstName) \(lastName) birthday today!"
+            let content = UNMutableNotificationContent()
+            content.body = message
+            content.sound = UNNotificationSound.default
+            var dateComponents = Calendar.current.dateComponents([.month, .day], from: date)
+            dateComponents.hour = 20
+            dateComponents.minute = 50
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            if let identifier = newBirthday.birthdayId {
+                let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                let center = UNUserNotificationCenter.current()
+                center.add(request, withCompletionHandler: nil)
+                }
+            
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     func loadItems(){
         let request: NSFetchRequest<Birthday> = Birthday.fetchRequest()
@@ -52,7 +77,7 @@ class BirthdaysViewController: UIViewController {
         } catch {
             print(error)
         }
-        self.tableView.reloadData()
+        self.table.reloadData()
     }
     
     func saveItems(){
@@ -104,17 +129,8 @@ extension BirthdaysViewController: UITableViewDelegate {
             context.delete(birthday)
             birthdays.remove(at: indexPath.row)
             saveItems()
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            table.deleteRows(at: [indexPath], with: .fade)
         }
     }
 }
 
-extension BirthdaysViewController: RefreshData {
-    
-    func refreshArray(_ element: Birthday) {
-        birthdays.append(element)
-        saveItems()
-        tableView.reloadData()
-    }
-  
-}
