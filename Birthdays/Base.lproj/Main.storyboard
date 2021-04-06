@@ -146,14 +146,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="379"/>
                                                 <subviews>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="mBk-md-qwl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="291"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="311"/>
                                                     </datePicker>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khc-Tq-AVU">
-                                                        <rect key="frame" x="137" y="299" width="140" height="80"/>
+                                                        <rect key="frame" x="30" y="319" width="354" height="60"/>
                                                         <color key="backgroundColor" name="GreenBlue"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Ob6-W4-QOj"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="x7h-2g-5ZQ"/>
+                                                            <constraint firstAttribute="height" constant="60" id="8dO-49-yP8"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
                                                         <state key="normal" title="Save">
@@ -167,9 +166,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="mBk-md-qwl" secondAttribute="trailing" id="3XL-6c-g94"/>
                                                     <constraint firstItem="mBk-md-qwl" firstAttribute="centerX" secondItem="Teb-SQ-71H" secondAttribute="centerX" id="Bzx-qU-tzX"/>
-                                                    <constraint firstItem="khc-Tq-AVU" firstAttribute="top" secondItem="mBk-md-qwl" secondAttribute="bottom" constant="8" id="TeZ-qG-BSO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="khc-Tq-AVU" secondAttribute="trailing" constant="30" id="F7W-7n-Bya"/>
                                                     <constraint firstItem="mBk-md-qwl" firstAttribute="leading" secondItem="Teb-SQ-71H" secondAttribute="leading" id="UYG-h4-KaS"/>
-                                                    <constraint firstItem="khc-Tq-AVU" firstAttribute="centerX" secondItem="Teb-SQ-71H" secondAttribute="centerX" id="a8t-NV-Hcl"/>
+                                                    <constraint firstItem="khc-Tq-AVU" firstAttribute="leading" secondItem="Teb-SQ-71H" secondAttribute="leading" constant="30" id="pNN-ga-6r4"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>

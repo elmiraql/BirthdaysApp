@@ -24,7 +24,7 @@ class AddBirthdayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.maximumDate = Date()
-        saveButton.layer.cornerRadius = 40
+        saveButton.layer.cornerRadius = 15
         saveButton.layer.borderWidth = 3
         saveButton.layer.borderColor = UIColor(named: "GreenBlue")!.cgColor
     }
